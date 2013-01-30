@@ -1,0 +1,1 @@
+$('.container-fluid').html("<%= escape_javascript(render :partial => 'index', :locals =>{:user_id => params[:user_id] }) %>");

@@ -1,0 +1,20 @@
+<div class="hero-unit ">
+	<%= form_for(@user, :html => {:class => 'form-horizontal'}) do |f|%>
+	<% if @user.errors.any? %>
+	<div id="error_explanation">
+		<h2><%#= pluralize(@user.errors.count, "error") %>User prohibited to being saved.</h2>
+	</div>
+	<% end %>
+	<%= "Users form" %>
+	<hr/>
+	<%= wrap_input_field("#{f.text_field :name , :class => 'input-medium', :placeholder =>'name' }", "Name")%>
+	<%= wrap_input_field("#{f.text_field :email , :class => 'input-medium', :placeholder => 'email'}", "Email Id")%>
+	<%= wrap_input_field("#{f.password_field :password, :class => 'input-medium', :placeholder => 'password'}", "Password")%>
+
+	<div class="form-actions">
+		<%= f.submit "#{label}", :class => "btn btn-primary"%>
+	</div>
+
+	<% end %>
+</div>
+

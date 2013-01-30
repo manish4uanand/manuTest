@@ -11,11 +11,72 @@
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
-					
+					<a class="brand" href="#"><%= t('.project_name')%></a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class="active">
+								<a href="#home"><%= t('.home')%></a>
+							</li>
+							<li class="active">
+								<a href="#aboutus">About us</a>
+							</li>
+							<li class="active">
+								<a href="#contact">Contact</a>
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#"> Dropdown <b class="caret"></b> </a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">Action</a>
+									</li>
+									<li>
+										<a href="#">Another action</a>
+									</li>
+									<li>
+										<a href="#">Something else here</a>
+									</li>
+									<li class="divider"></li>
+									<li class="nav-header">
+										Nav header
+									</li>
+									<li>
+										<a href="#">Separated link</a>
+									</li>
+									<li>
+										<a href="#">One more separated link</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+					</div>
+					<div class="nav-collapse collapse">
+
+						<div class="btn">
+							<%= link_to "SignUp", new_user_path , :remote => true %>
+						</div>
+						<!-- <form class="navbar-form pull-right">
+						<input class="span2" type="text" placeholder="Email">
+						<input class="span2" type="password" placeholder="Password">
+						<button class="btn" type="submit">
+						Sign in
+						</button>
+						</form>
+						-->
+					</div>
 				</div>
 			</div>
-		</div>
-		<%= yield %>
+			<div class="container">
 
+				<%= yield %>
+				<footer>
+					<p>
+						© Company 2012
+					</p>
+				</footer>
+			</div>
+				
+		</div>
+		<%= javascript_include_tag  "bootstrap.js" %>
 	</body>
 </html>

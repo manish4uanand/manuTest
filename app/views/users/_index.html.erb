@@ -1,0 +1,11 @@
+<div class="container">
+	<div class="container-fluid">
+		<div class="hero-unit">
+			<%= "Users are" %>
+			<% @users.each do |u| %>
+				Name <%= u.name %>
+				Email <%= u.email %>
+			<% end %>			
+		</div>
+	</div>
+</div>
